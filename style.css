@@ -159,29 +159,27 @@ table th {
     font-size: 20px;
     text-align: left;
 }
-.About{
+.About {
     width: 90%;
-    display: inline-flex;
-    margin: auto;
+    display: flex;
     background-color: #674830;
     border-radius: 50px;
     margin-top: 5%;
     margin-left: 5%;
-    padding: 0px 0px 25px;
     margin-bottom: 10%;
 }
-.about{
-    width: 40%;
-    margin: 45px 10px 0px;
-    margin-left: inherit;
+.about {
+    width: 90%;
+    padding: 40px;
 }
+
+
 .about h1{
     font-size: 2.2rem;
     width: 100%;
 }
-.about p{
-    width: 80%;
-    margin: 16px 0;
+.about p {
+    margin: 16px 0px 0px 0px;
 }
 .vertical{
     margin-top: 55px;
@@ -189,36 +187,39 @@ table th {
     width: 2px;
     background-color: #F4EBD0;
 }
-.connect{
-    width: 40%;
-    margin: 45px 10px 0px;
-    margin-left: inherit;
+.connect {
+    display: flex;
+    color: #31241E;
 }
 .connect h1{
-    font-size: 2.2rem;
-    width: 100%;
+    font-size: 1.5rem;
+    padding-top: 2px;
 }
-.connect ul{
-    display: flex;
+
+.links {
+    padding: 5px 0px 0px 10px;
+}
+
+
+.connect ul {
+    display: flex
+;
     justify-content: space-around;
     margin-right: 70%;
 }
-.connect ul li{
+
+.connect ul li {
     list-style: none;
     margin: 0 1px;
 }
-.links{
-    margin: 35px 20px;
-}
-.links a svg{
-    width: 32px;
-    height: 32px;
-    color: #F4EBD0;
+
+.links a svg {
+    color: #31241E;
 }
 .links a svg:hover{
     color: #A47551;
-    width: 35px;
-    height: 35px;
+    width: 26px;
+    height: 26px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -395,4 +396,15 @@ table th {
         list-style: none;
         margin: 0px 5px;
     }
+}
+footer {
+    display: grid;
+    justify-content: center;
+    height: 64px;
+    background-color: #F4EBD0;
+}
+footer p{
+    color: #31241E;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
