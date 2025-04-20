@@ -190,6 +190,8 @@ table th {
 .connect {
     display: flex;
     color: #31241E;
+    padding: 5px;
+    justify-content: center;
 }
 .connect h1{
     font-size: 1.5rem;
@@ -210,7 +212,7 @@ table th {
 
 .connect ul li {
     list-style: none;
-    margin: 0 1px;
+    padding-right: 5px;
 }
 
 .links a svg {
@@ -403,8 +405,9 @@ footer {
     height: 64px;
     background-color: #F4EBD0;
 }
-footer p{
+footer p {
     color: #31241E;
     font-size: 0.8rem;
+    text-align: center;
     font-weight: 600;
 }
