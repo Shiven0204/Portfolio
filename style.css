@@ -386,10 +386,15 @@ table th {
         background-color: #F4EBD0;
     }
     
+    .connect {
+        display: flex;
+        color: #31241E;
+        justify-content: center;
+    }
     
     
     .connect h1 {
-        font-size: 2.05rem;
+        font-size: 1.7rem;
         width: 100%;
     }
     
