@@ -170,7 +170,7 @@ table th {
 }
 .about {
     width: 90%;
-    padding: 40px 40px 0px;
+    padding: 40px;
 }
 
 
@@ -180,7 +180,7 @@ table th {
 }
 .about p{
     width: 80%;
-    margin: 16px 0;
+    margin: 16px 0px 0px;
 }
 .vertical{
     margin-top: 55px;
@@ -319,7 +319,7 @@ table th {
     
     .education {
         width: 94%;
-        display: inline-grid;
+        display: inline-flex;
         margin: auto;
         background-color: #674830;
         border-radius: 50px;
@@ -330,18 +330,15 @@ table th {
     
     
     .edu {
-        width: 90%;
-        margin: 45px 0px 120px;
-        margin-left: inherit;
+        width: 100%;
+        padding: 40px;
     }
     
     
     
     table {
-        width: 95%;
-        height: 100%;
-        margin-top: 30px;
-        margin-left: 10%;
+        width: 100%;
+        margin: 16px 0px;
     }
     
     
@@ -401,9 +398,16 @@ table th {
 }
 footer {
     display: grid;
-    justify-content: center;
     height: 64px;
     background-color: #F4EBD0;
+}
+
+.copyright{
+    text-align: center;
+}
+
+footer .connect{
+    justify-content: center;
 }
 footer p{
     color: #31241E;
