@@ -364,6 +364,10 @@ table th {
         margin-bottom: 10%;
     }
     
+    .about {
+        width: 90%;
+        padding: 40px 40px 0px 40px;
+    }
     
     .about h1 {
         font-size: 2.05rem;
