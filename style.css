@@ -170,7 +170,7 @@ table th {
 }
 .about {
     width: 90%;
-    padding: 40px;
+    padding: 40px 40px 0px;
 }
 
 
@@ -178,8 +178,9 @@ table th {
     font-size: 2.2rem;
     width: 100%;
 }
-.about p {
-    margin: 16px 0px 0px 0px;
+.about p{
+    width: 80%;
+    margin: 16px 0;
 }
 .vertical{
     margin-top: 55px;
@@ -190,12 +191,11 @@ table th {
 .connect {
     display: flex;
     color: #31241E;
-    padding: 5px;
-    justify-content: center;
 }
 .connect h1{
-    font-size: 1.5rem;
-    padding-top: 2px;
+        font-size: 1.5rem;
+        padding-top: 2px;
+
 }
 
 .links {
@@ -212,7 +212,7 @@ table th {
 
 .connect ul li {
     list-style: none;
-    padding-right: 5px;
+    margin: 0 1px;
 }
 
 .links a svg {
@@ -364,10 +364,6 @@ table th {
         margin-bottom: 10%;
     }
     
-    .about {
-        width: 90%;
-        padding: 40px 40px 0px 40px;
-    }
     
     .about h1 {
         font-size: 2.05rem;
@@ -390,15 +386,10 @@ table th {
         background-color: #F4EBD0;
     }
     
-    .connect {
-        display: flex;
-        color: #31241E;
-        justify-content: center;
-    }
     
     
     .connect h1 {
-        font-size: 1.7rem;
+        font-size: 2.05rem;
         width: 100%;
     }
     
@@ -414,9 +405,8 @@ footer {
     height: 64px;
     background-color: #F4EBD0;
 }
-footer p {
+footer p{
     color: #31241E;
     font-size: 0.8rem;
-    text-align: center;
     font-weight: 600;
 }
