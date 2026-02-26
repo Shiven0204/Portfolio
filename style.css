@@ -43,3 +43,244 @@ body {
   text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
   font-family: "Arial", sans-serif;
 }
+
+.navbar {
+  display: none;
+}
+
+.nav-container {
+  display: none;
+}
+
+.logo-text {
+  display: none;
+}
+
+.nav-menu {
+  display: none;
+}
+
+.nav-link {
+  display: none;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  background: var(--dark-bg);
+  margin-top: 0;
+}
+
+.hero .container {
+  width: 100%;
+}
+
+.main-title {
+  margin-bottom: 60px;
+}
+
+.hero-wrapper {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.profile-section {
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  background: var(--dark-bg-secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.greeting {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-family: "Courier New", monospace;
+}
+
+.skills {
+  padding: 80px 0;
+  background: var(--dark-bg);
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.skill-group {
+  background: var(--dark-bg-secondary);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.skill-group-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tag {
+  background: var(--border-color);
+  color: var(--text-primary);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  cursor: default;
+  transition: var(--transition);
+}
+
+.tag:hover {
+  background: var(--text-primary);
+  color: var(--dark-bg);
+  border-color: var(--text-primary);
+}
+
+.projects {
+  padding: 80px 0;
+  background: var(--dark-bg);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2.5rem;
+}
+
+.project-card {
+  background: var(--dark-bg-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  border-color: var(--text-primary);
+  transform: translateY(-5px);
+}
+
+.project-image {
+  position: relative;
+  height: 220px;
+  background: #2a2a2a;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  color: #555;
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  border-radius: 12px 12px 0 0;
+}
+
+.project-image .project-img,
+.project-image img.project-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.project-overlay {
+  display: none;
+}
+
+.project-link {
+  display: none;
+}
+
+.project-content {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.project-github-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 1.1rem;
+}
+
+.project-github-link:hover {
+  background: var(--text-primary);
+  color: var(--dark-bg);
+  transform: scale(1.08);
+}
