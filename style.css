@@ -1,3 +1,4 @@
+/* ==================== Global Variables & Reset ==================== */
 :root {
   --primary-color: #ffffff;
   --dark-bg: #000000;
@@ -6,6 +7,7 @@
   --text-secondary: #e0e0e0;
   --border-color: #333333;
   --transition: all 0.2s ease;
+  --global-scale: 0.75; /* smaller overall sizing factor */
 }
 
 * {
@@ -27,23 +29,25 @@ body {
   overflow-x: hidden;
 }
 
+/* ==================== Reusable Classes ==================== */
 .container {
-  max-width: 1200px;
+  max-width: 880px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
 .section-title {
-  font-size: 4rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: var(--text-primary);
-  letter-spacing: 8px;
+  letter-spacing: 5px;
   text-transform: uppercase;
-  text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.22);
   font-family: "Arial", sans-serif;
 }
 
+/* ==================== Navigation ==================== */
 .navbar {
   display: none;
 }
@@ -64,12 +68,13 @@ body {
   display: none;
 }
 
+/* ==================== Hero Section ==================== */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 0;
+  padding: 24px 0;
   background: var(--dark-bg);
   margin-top: 0;
 }
@@ -84,7 +89,7 @@ body {
 
 .hero-wrapper {
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
   align-items: flex-start;
 }
 
@@ -93,14 +98,14 @@ body {
 }
 
 .avatar {
-  width: 200px;
-  height: 200px;
+  width: 110px;
+  height: 110px;
   background: var(--dark-bg-secondary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 80px;
+  font-size: 44px;
   color: var(--text-primary);
   border: 2px solid var(--border-color);
 }
@@ -110,28 +115,29 @@ body {
 }
 
 .name {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 
 .greeting {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.9rem;
 }
 
 .description {
-  font-size: 1.1rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
   font-family: "Courier New", monospace;
 }
 
+/* ==================== Skills Section ==================== */
 .skills {
-  padding: 80px 0;
+  padding: 48px 0;
   background: var(--dark-bg);
 }
 
@@ -143,16 +149,16 @@ body {
 
 .skill-group {
   background: var(--dark-bg-secondary);
-  padding: 2.5rem;
-  border-radius: 12px;
+  padding: 1.1rem;
+  border-radius: 8px;
   border: 1px solid var(--border-color);
 }
 
 .skill-group-title {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .tags-container {
@@ -164,9 +170,9 @@ body {
 .tag {
   background: var(--border-color);
   color: var(--text-primary);
-  padding: 8px 18px;
-  border-radius: 20px;
-  font-size: 0.95rem;
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 0.75rem;
   font-weight: 500;
   border: 1px solid var(--border-color);
   cursor: default;
@@ -179,20 +185,21 @@ body {
   border-color: var(--text-primary);
 }
 
+/* ==================== Projects Section ==================== */
 .projects {
-  padding: 80px 0;
+  padding: 48px 0;
   background: var(--dark-bg);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.6rem;
 }
 
 .project-card {
   background: var(--dark-bg-secondary);
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border-color);
   transition: var(--transition);
@@ -207,7 +214,7 @@ body {
 
 .project-image {
   position: relative;
-  height: 220px;
+  height: 140px;
   background: #2a2a2a;
   overflow: hidden;
   display: flex;
@@ -227,6 +234,7 @@ body {
   border-radius: 12px 12px 0 0;
 }
 
+/* Project preview image */
 .project-image .project-img,
 .project-image img.project-img {
   width: 100%;
@@ -244,24 +252,24 @@ body {
 }
 
 .project-content {
-  padding: 2rem;
+  padding: 1.2rem;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
 .project-title {
-  font-size: 1.3rem;
-  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
   color: var(--text-primary);
   font-weight: 600;
 }
 
 .project-description {
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  font-size: 0.75rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
   flex: 1;
 }
 
@@ -269,14 +277,14 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 30px;
+  height: 30px;
   background: var(--border-color);
   border-radius: 6px;
   color: var(--text-primary);
   text-decoration: none;
   transition: var(--transition);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
 }
 
 .project-github-link:hover {
@@ -285,10 +293,11 @@ body {
   transform: scale(1.08);
 }
 
+/* ==================== Footer Section ==================== */
 .footer {
   background: var(--dark-bg);
   border-top: 1px solid var(--border-color);
-  padding: 80px 0 30px;
+  padding: 56px 0 20px;
 }
 
 .contact-wrapper {
@@ -297,13 +306,13 @@ body {
 
 .contact-info {
   background: var(--dark-bg-secondary);
-  padding: 2.5rem;
-  border-radius: 12px;
+  padding: 1.6rem;
+  border-radius: 10px;
   border: 1px solid var(--border-color);
 }
 
 .contact-info h3 {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 1rem;
@@ -327,7 +336,7 @@ body {
   align-items: center;
   gap: 1rem;
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .contact-item i {
@@ -352,8 +361,8 @@ body {
 }
 
 .social-link {
-  width: 45px;
-  height: 45px;
+  width: 38px;
+  height: 38px;
   background: var(--border-color);
   border-radius: 6px;
   display: flex;
@@ -362,7 +371,7 @@ body {
   color: var(--text-primary);
   text-decoration: none;
   transition: var(--transition);
-  font-size: 1.2rem;
+  font-size: 1.05rem;
 }
 
 .social-link:hover {
@@ -375,12 +384,12 @@ body {
 .download-resume {
   display: inline-block;
   margin-top: 1.8rem;
-  padding: 0.65rem 1.2rem;
+  padding: 0.5rem 0.9rem;
   background: var(--border-color);
   color: var(--text-primary);
   border-radius: 6px;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   transition: var(--transition);
 }
 
@@ -392,13 +401,13 @@ body {
 
 .footer-bottom {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 1.2rem;
   border-top: 1px solid var(--border-color);
   color: #888;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
 }
 
-
+/* ==================== Responsive Design ==================== */
 @media (max-width: 768px) {
   .section-title {
     font-size: 2.5rem;
@@ -499,7 +508,10 @@ body {
   }
 }
 
+/* ==================== Animations ==================== */
+/* Minimal animations for clean design */
 
+/* Reveal utility: used for scroll and load animations */
 .reveal {
   opacity: 0;
   transform: translateY(18px);
