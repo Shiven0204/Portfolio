@@ -21,16 +21,27 @@
       <nav class="navbar container" aria-label="Main navigation">
         <a href="#home" class="brand" aria-label="Go to homepage">S</a>
 
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div class="nav-controls">
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark and light mode"
+          >
+            <i class="fa-solid fa-moon icon-moon"></i>
+            <i class="fa-solid fa-sun icon-sun"></i>
+          </button>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
 
         <div class="nav-panel" id="nav-panel">
           <ul class="nav-menu">
@@ -40,17 +51,6 @@
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
-
-          <div class="nav-actions">
-            <button
-              class="theme-toggle"
-              type="button"
-              aria-label="Toggle dark and light mode"
-            >
-              <i class="fa-solid fa-moon icon-moon"></i>
-              <i class="fa-solid fa-sun icon-sun"></i>
-            </button>
-          </div>
         </div>
       </nav>
     </header>
@@ -59,8 +59,8 @@
       <section id="home" class="hero section">
         <div class="container hero-layout">
           <div class="hero-copy reveal">
-            <p class="eyebrow">Hi 👋</p>
-            <h1>I’m <span>Shiven</span></h1>
+            <p class="eyebrow">Hi, I'm</p>
+            <h1><span>Shiven</span></h1>
             <p class="lead">Developer by choice, problem solver by habit.</p>
             <p class="hero-text">
               I enjoy turning ideas into structured, reliable systems. My focus
@@ -479,13 +479,6 @@
         <div class="footer-brand-block">
           <a href="#home" class="brand footer-logo">Shiven</a>
           <p>Developer building reliable systems with a designer’s eye.</p>
-        </div>
-
-        <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
         </div>
 
         <div class="footer-socials">
