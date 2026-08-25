@@ -178,14 +178,14 @@ function attachRevealObserver() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.querySelectorAll('.reveal').forEach((item, index) => {
-            item.style.setProperty('--reveal-delay', `${index * 90}ms`);
+            item.style.setProperty('--reveal-delay', `${index * 65}ms`);
             item.classList.add('is-visible');
           });
           observer.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.18, rootMargin: '0px 0px -8% 0px' }
+    { threshold: 0.01, rootMargin: '0px' }
   );
 
   revealSections.forEach((section) => observer.observe(section));

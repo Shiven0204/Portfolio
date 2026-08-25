@@ -17,7 +17,7 @@
   --star-low-opacity: 0.45;
   --star-high-opacity: 1;
   --star-twinkle-duration: 0.7s;
-  --reveal-duration: 650ms;
+  --reveal-duration: 560ms;
   --hover-duration: 160ms;
   --transition: 180ms ease;
   --focus: #e0e0e0;
@@ -42,7 +42,7 @@
   --star-low-opacity: 0.5;
   --star-high-opacity: 1;
   --star-twinkle-duration: 0.7s;
-  --reveal-duration: 650ms;
+  --reveal-duration: 560ms;
   --hover-duration: 160ms;
   --focus: #1a1a1a;
 }
