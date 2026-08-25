@@ -315,7 +315,7 @@ main,
   width: 38px;
   height: 38px;
   position: fixed;
-  right: max(8px, calc((100vw - 1100px) / 2));
+  right: 16px;
   bottom: 16px;
   z-index: 40;
 }
@@ -954,7 +954,7 @@ main,
   overflow-wrap: anywhere;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 760px) {
   .site-footer {
     padding: 12px 0 18px;
   }
@@ -967,7 +967,7 @@ main,
   }
 
   .back-to-top {
-    right: 8px;
+    right: 12px;
     bottom: 12px;
   }
 }
