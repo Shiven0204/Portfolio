@@ -438,7 +438,8 @@ main,
 
 .hero-copy .lead,
 .hero-copy .hero-text,
-.hero-copy .hero-text.secondary {
+.hero-copy .hero-text.secondary,
+.hero-copy .intro-statement {
   animation-delay: 210ms;
 }
 
@@ -452,10 +453,15 @@ main,
 }
 
 .hero-copy h1 {
-  font-size: clamp(3rem, 5vw, 5rem);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.3em;
+  font-size: clamp(2.6rem, 7vw, 5rem);
   line-height: 0.96;
   letter-spacing: -0.07em;
-  margin-bottom: 1.15rem;
+  margin-bottom: 1.35rem;
+  white-space: nowrap;
 }
 
 .hero-copy > .eyebrow {
@@ -467,8 +473,64 @@ main,
 }
 
 .hero-copy h1 span {
-  display: block;
+  display: inline;
   color: var(--text-soft);
+}
+
+.hero-copy h1 .hero-greeting {
+  color: var(--text);
+}
+
+.hero-copy h1 .hero-name {
+  color: var(--text-soft);
+}
+
+.build-line {
+  display: grid;
+  justify-items: center;
+  gap: 0.35rem;
+  min-height: 5.4rem;
+  margin: 0 auto 1.35rem;
+  color: var(--text);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  font-weight: 700;
+}
+
+.build-label {
+  color: var(--text-soft);
+  font-size: 0.78em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.build-phrase-shell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: min(20ch, 100%);
+  min-height: 1.7em;
+  color: var(--text);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  line-height: 1.2;
+}
+
+.build-phrase {
+  display: inline-block;
+  border-right: 2px solid var(--text);
+  padding-right: 0.2rem;
+  white-space: nowrap;
+  animation: caretBlink 760ms step-end infinite;
+}
+
+@keyframes caretBlink {
+  0%,
+  45% {
+    border-color: var(--text);
+  }
+  46%,
+  100% {
+    border-color: transparent;
+  }
 }
 
 .lead {
@@ -486,6 +548,15 @@ main,
 
 .hero-text.secondary {
   margin-top: 0.8rem;
+}
+
+.intro-statement {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--text-soft);
+  font-size: clamp(1rem, 1.7vw, 1.12rem);
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 .hero-actions {

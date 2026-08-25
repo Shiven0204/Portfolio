@@ -11,6 +11,14 @@ const modalContent = document.getElementById('modal-content');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 const revealItems = document.querySelectorAll('.reveal');
+const buildPhrase = document.querySelector('#build-phrase');
+
+const buildPhrases = [
+  'Web Applications',
+  'Mobile Experiences',
+  'Backend Systems',
+  'Clear User Interfaces'
+];
 
 function createStarBackground() {
   let starLayer = document.querySelector('.star-layer');
@@ -41,6 +49,39 @@ function createStarBackground() {
     star.style.animationDelay = `${(Math.random() * 8).toFixed(2)}s`;
     starLayer.appendChild(star);
   }
+}
+
+function initBuildPhrase() {
+  if (!buildPhrase) return;
+
+  let phraseIndex = 0;
+
+  function typePhrase(characterIndex) {
+    const phrase = buildPhrases[phraseIndex];
+    buildPhrase.textContent = phrase.slice(0, characterIndex);
+
+    if (characterIndex < phrase.length) {
+      window.setTimeout(() => typePhrase(characterIndex + 1), 75);
+      return;
+    }
+
+    window.setTimeout(erasePhrase, 1800);
+  }
+
+  function erasePhrase(characterIndex = buildPhrases[phraseIndex].length) {
+    buildPhrase.textContent = buildPhrases[phraseIndex].slice(0, characterIndex);
+
+    if (characterIndex > 0) {
+      window.setTimeout(() => erasePhrase(characterIndex - 1), 38);
+      return;
+    }
+
+    phraseIndex = (phraseIndex + 1) % buildPhrases.length;
+    window.setTimeout(() => typePhrase(0), 240);
+  }
+
+  buildPhrase.textContent = '';
+  typePhrase(0);
 }
 
 const projectData = {
@@ -352,6 +393,7 @@ function initBackToTop() {
 function init() {
   initTheme();
   createStarBackground();
+  initBuildPhrase();
   attachRevealObserver();
   initFilterButtons();
   initProjectDetails();
