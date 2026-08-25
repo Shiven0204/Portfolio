@@ -69,6 +69,16 @@ body {
   transition: background var(--transition), color var(--transition);
 }
 
+::selection {
+  background: var(--panel-alt);
+  color: var(--text);
+}
+
+::-moz-selection {
+  background: var(--panel-alt);
+  color: var(--text);
+}
+
 section[id] {
   scroll-margin-top: 90px;
 }
