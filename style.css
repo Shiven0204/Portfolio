@@ -312,9 +312,11 @@ main,
 }
 
 .back-to-top {
+  width: 38px;
+  height: 38px;
   position: fixed;
-  right: 24px;
-  bottom: 24px;
+  right: max(16px, calc((100vw - 1100px) / 2));
+  bottom: 16px;
   z-index: 40;
 }
 
@@ -933,7 +935,7 @@ main,
 }
 
 .site-footer {
-  padding: 24px 0 32px;
+  padding: 14px 0 18px;
   border-top: 1px solid var(--border);
   background: rgba(0, 0, 0, 0.04);
 }
@@ -942,7 +944,7 @@ main,
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 0;
   padding-right: 3.5rem;
   color: var(--text-soft);
   text-align: center;
@@ -954,14 +956,19 @@ main,
 
 @media (max-width: 520px) {
   .site-footer {
-    padding: 20px 0 28px;
+    padding: 12px 0 18px;
   }
 
   .bottom-bar {
-    margin-top: 0.9rem;
+    margin-top: 0;
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 2.75rem;
+  }
+
+  .back-to-top {
+    right: 12px;
+    bottom: 12px;
   }
 }
 
