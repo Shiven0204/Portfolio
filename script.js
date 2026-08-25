@@ -10,7 +10,7 @@ const modal = document.getElementById('project-modal');
 const modalContent = document.getElementById('modal-content');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
-const revealItems = document.querySelectorAll('.reveal');
+const revealSections = document.querySelectorAll('main section[id]');
 const buildPhrase = document.querySelector('#build-phrase');
 
 const buildPhrases = [
@@ -177,15 +177,18 @@ function attachRevealObserver() {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
+          entry.target.querySelectorAll('.reveal').forEach((item, index) => {
+            item.style.setProperty('--reveal-delay', `${index * 90}ms`);
+            item.classList.add('is-visible');
+          });
           observer.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.18, rootMargin: '0px 0px -8% 0px' }
   );
 
-  revealItems.forEach((item) => observer.observe(item));
+  revealSections.forEach((section) => observer.observe(section));
 }
 
 function updateActiveNav() {

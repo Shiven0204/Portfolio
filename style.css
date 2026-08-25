@@ -1131,6 +1131,7 @@ main,
   transform: translateY(22px);
   transition: opacity var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1),
     transform var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
 }
 
 .reveal.is-visible {
