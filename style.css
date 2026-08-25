@@ -17,7 +17,7 @@
   --star-low-opacity: 0.45;
   --star-high-opacity: 1;
   --star-twinkle-duration: 0.7s;
-  --reveal-duration: 120ms;
+  --reveal-duration: 650ms;
   --hover-duration: 160ms;
   --transition: 180ms ease;
   --focus: #e0e0e0;
@@ -42,7 +42,7 @@
   --star-low-opacity: 0.5;
   --star-high-opacity: 1;
   --star-twinkle-duration: 0.7s;
-  --reveal-duration: 120ms;
+  --reveal-duration: 650ms;
   --hover-duration: 160ms;
   --focus: #1a1a1a;
 }
@@ -1128,9 +1128,9 @@ main,
 
 .reveal {
   opacity: 0;
-  transform: translateY(4px);
-  transition: opacity var(--reveal-duration) ease,
-    transform var(--reveal-duration) ease;
+  transform: translateY(22px);
+  transition: opacity var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1),
+    transform var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal.is-visible {
