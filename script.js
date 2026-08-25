@@ -295,16 +295,16 @@ function smoothScrollTo(targetId) {
   if (!section) return;
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const startY = window.scrollY;
+  const offset = header ? header.offsetHeight + 18 : 18;
+  const sectionTop = section.getBoundingClientRect().top + startY;
+  const targetY = Math.max(0, sectionTop - offset);
+
   if (prefersReducedMotion) {
-    const offset = header ? header.offsetHeight + 18 : 18;
-    const top = Math.max(0, section.offsetTop - offset);
-    window.scrollTo({ top, behavior: 'auto' });
+    window.scrollTo({ top: targetY, behavior: 'auto' });
     return;
   }
 
-  const startY = window.scrollY;
-  const offset = header ? header.offsetHeight + 18 : 18;
-  const targetY = Math.max(0, section.offsetTop - offset);
   const distance = targetY - startY;
   const duration = 500;
   const startTime = performance.now();
