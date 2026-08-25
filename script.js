@@ -177,6 +177,7 @@ function attachRevealObserver() {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          entry.target.classList.add('section-visible');
           entry.target.querySelectorAll('.reveal').forEach((item, index) => {
             item.style.setProperty('--reveal-delay', `${index * 65}ms`);
             item.classList.add('is-visible');
@@ -185,10 +186,13 @@ function attachRevealObserver() {
         }
       });
     },
-    { threshold: 0.01, rootMargin: '0px' }
+    { threshold: 0.12, rootMargin: '0px' }
   );
 
-  revealSections.forEach((section) => observer.observe(section));
+  revealSections.forEach((section) => {
+    section.classList.add('section-reveal');
+    observer.observe(section);
+  });
 }
 
 function updateActiveNav() {
