@@ -1051,7 +1051,7 @@ main,
   position: relative;
   width: min(720px, calc(100% - 24px));
   max-height: 85vh;
-  overflow: auto;
+  overflow: hidden;
   background: var(--bg-soft);
   border: 1px solid var(--border);
   border-radius: 22px;
@@ -1059,6 +1059,28 @@ main,
   padding: 4.25rem 1.5rem 1.5rem;
   z-index: 1;
   animation: modalIn 200ms ease;
+}
+
+#modal-content {
+  max-height: calc(85vh - 5.75rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 0.35rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--panel-alt) transparent;
+}
+
+#modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+#modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#modal-content::-webkit-scrollbar-thumb {
+  background: var(--panel-alt);
+  border-radius: 999px;
 }
 
 @keyframes modalIn {
